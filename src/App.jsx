@@ -48,6 +48,15 @@ function NavigationBar() {
                             <span className="material-symbols-outlined text-lg">chat</span>
                             WhatsApp
                         </a>
+                        {/* Login Button */}
+                        <Link
+                            to="/login"
+                            className="flex items-center gap-1.5 border-2 border-brand-text text-brand-text hover:bg-brand-text hover:text-white px-4 py-2 rounded-custom font-bold text-sm transition-all active:scale-95"
+                            data-purpose="admin-login"
+                        >
+                            <span className="material-symbols-outlined text-base">admin_panel_settings</span>
+                            Admin
+                        </Link>
                     </div>
                     {/* Mobile Toggle */}
                     <div className="md:hidden flex items-center">
@@ -87,6 +96,14 @@ function NavigationBar() {
                             <span className="material-symbols-outlined text-lg">chat</span>
                             WhatsApp
                         </a>
+                        <Link
+                            to="/login"
+                            onClick={() => setMobileOpen(false)}
+                            className="flex items-center gap-2 border-2 border-brand-text text-brand-text px-6 py-3 rounded-custom font-bold text-base transition-all hover:bg-brand-text hover:text-white active:scale-95"
+                        >
+                            <span className="material-symbols-outlined text-lg">admin_panel_settings</span>
+                            Admin Login
+                        </Link>
                     </div>
                 </div>
             )}
